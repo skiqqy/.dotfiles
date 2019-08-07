@@ -1,5 +1,6 @@
 export EDITOR=vim
 export VISUAL=vim
+
 #My aliases
 alias c='clear'
 alias ll='ls -l'
