@@ -7,6 +7,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'rhysd/vim-clang-format'
+Plug 'valloric/vim-indent-guides'
 call plug#end()
 " }}}
 
@@ -26,6 +28,7 @@ set background=dark
 " KEYBINDS {{{
 nnoremap \ :noh<return>
 nnoremap <C-\> :ToggleNumber()<CR>
+nnoremap <C-l> :IndentGuidesToggle<return>
 "space open/closes folds
 nnoremap <space> za 
 nnoremap <Tab> :bnext<CR>
