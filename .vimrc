@@ -10,6 +10,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'rhysd/vim-clang-format'
 Plug 'valloric/vim-indent-guides'
 Plug 'fedorenchik/VimCalc3'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 " }}}
 
