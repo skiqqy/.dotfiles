@@ -9,6 +9,7 @@ alias ebrc='vim ~/.bashrc'
 alias tmx='~/.scripts/Workspace.sh'
 alias gucci='cc -Wall -ansi -pedantic -o'
 alias updots='~/repos/.dotfilesMinimal/update.sh'
+alias vid='vim ~/'
 # Search files in the current folder
 alias f="find . | grep "
 

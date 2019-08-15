@@ -11,6 +11,7 @@ Plug 'rhysd/vim-clang-format'
 Plug 'valloric/vim-indent-guides'
 Plug 'fedorenchik/VimCalc3'
 Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 " }}}
 
@@ -27,10 +28,14 @@ set background=dark
 "hi Comment cterm=italic
 " }}}
 
+" COMMANDS {{{
+" }}}
+
 " KEYBINDS {{{
 nnoremap \ :noh<return>
 nnoremap <C-\> :ToggleNumber()<CR>
 nnoremap <C-l> :IndentGuidesToggle<return>
+nnoremap <C-n> :NERDTreeToggle<CR>
 "space open/closes folds
 nnoremap <space> za 
 nnoremap <Tab> :bnext<CR>
