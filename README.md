@@ -3,7 +3,12 @@ My setups used for my raspberry pi's
 
 ## __INSTALLING__  
 __THERE IS A PROBLEM WITH POWERLINE-FONTS, I HAVENT AUTOMATED THE INSTALL OF THIS YET SO PLEASE INSTALL IT FIRST AS YOU NEED SUDO RIGHTS, AND ON THE NARGA MACHINES I DO NOT HAVE THIS ACCESS__  
+  
+__TERMINAL__
 ![TERMINAL](https://i.imgur.com/SQlMESF.png)
+  
+__VIM__
+![VIM](https://i.imgur.com/UqgDLXc.png)
 * clone inside ~/repos, cd into the file. 
 * ensure that both .sh files can be executed, this is done like so:
 * chmod 700 *.sh 
