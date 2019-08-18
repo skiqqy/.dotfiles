@@ -29,6 +29,8 @@ set background=dark
 " }}}
 
 " COMMANDS {{{
+"show trailing white spaces by default
+:command Trail /\s\+$
 " }}}
 
 " KEYBINDS {{{
@@ -37,7 +39,7 @@ nnoremap <C-\> :ToggleNumber()<CR>
 nnoremap <C-l> :IndentGuidesToggle<return>
 nnoremap <C-n> :NERDTreeToggle<CR>
 "space open/closes folds
-nnoremap <space> za 
+nnoremap <space> za
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <S-x> :bdelete<CR>
@@ -46,6 +48,7 @@ nnoremap <S-x> :bdelete<CR>
 " ALL SETS {{{
 set number
 set relativenumber
+set hlsearch
 "TAB SETTINGS
 set autoindent    " Copy indent from current line when starting a new line.
 set tabstop=4     " Size of a hard tabstop (ts).
