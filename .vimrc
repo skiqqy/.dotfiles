@@ -28,9 +28,27 @@ set background=dark
 "hi Comment cterm=italic
 " }}}
 
+" FUNCTIONS {{{
+function! <SID>StripTrailingWhiteSpaces()
+  "prep: save last searched
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " remove trailing
+  let c = col(".")
+  %s/\s\+$//e
+  " restore hostory
+  let @/=_s
+  call cursor(l, c)
+endfunction
+" }}}
+
 " COMMANDS {{{
 "show trailing white spaces by default
 :command Trail /\s\+$
+" remove all whitespaces when done
+nnoremap <silent> <F5> :call <SID>StripTrailingWhiteSpaces()<CR>
+autocmd BufWritePre *.py, *.txt, *.c :call <SID>StripTrailingWhiteSpaces()
 " }}}
 
 " KEYBINDS {{{
