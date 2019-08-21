@@ -10,7 +10,7 @@ if [[ $var = all ]]; then
   echo "INSTALLING ALL"
   echo "CREATING BACKUPS IN ~/.tmp, moved .bashrc, .vim, .vimrc"
   mkdir .tmp
-  mv -rf .vim .vimrc .bashrc ~/.tmp
+  mv .vim .vimrc .bashrc ~/.tmp
 
   mkdir -p .vim/autoload
   mkdir -p .scripts/
@@ -20,6 +20,7 @@ if [[ $var = all ]]; then
   ln -s ~/repos/.dotfilesMinimal/.bashrc ~/.bashrc
   ln -s ~/repos/.dotfilesMinimal/.vimrc ~/.vimrc
   source .bashrc
+  echo "FINISHED INSTALLING BASHRC AND VIMRC"
 
 elif [[ $var = bash ]]; then
   echo "INSTALLING ONLY BASH"
@@ -27,18 +28,21 @@ elif [[ $var = bash ]]; then
   mkdir .tmp
   mkdir -p .scripts/
   cp ~/repos/.dotfilesMinimal/miscfiles/Workspace.sh ~/.scripts
-  mv -rf .bashrc ~/.tmp
+  mv .bashrc ~/.tmp
 
   ln -s ~/repos/.dotfilesMinimal/.bashrc ~/.bashrc
   source .bashrc
+  echo "FINISHED INSTALLING BASHRC"
+
 elif [[ $var = vim ]]; then
   echo "INSTALLING ONLY VIM"
   echo "CREATING BACKUPS IN ~/.tmp, moved .vim, .vimrc"
   mkdir .tmp
-  mv -rf .vim .vimrc ~/.tmp
+  mv .vim .vimrc ~/.tmp
 
   mkdir -p .vim/autoload
   cp ~/repos/.dotfilesMinimal/miscfiles/plug.vim ~/.vim/autoload
   ln -s ~/repos/.dotfilesMinimal/.vimrc ~/.vimrc
+  echo "FINISHED INSTALLING VIM SETUP"
 else echo "Not a valid argument, install failed"
 fi
