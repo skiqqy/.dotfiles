@@ -1,0 +1,44 @@
+echo "### commands include ###"
+echo " => all  = both vim and bashrc will be installed"
+echo " => bash = only bashrc will be installed"
+echo " => vim  = only vim will be installed"
+echo "########################"
+read var
+cd
+
+if [[ $var = all ]]; then
+  echo "INSTALLING ALL"
+  echo "CREATING BACKUPS IN ~/.tmp, moved .bashrc, .vim, .vimrc"
+  mkdir .tmp
+  mv -rf .vim .vimrc .bashrc ~/.tmp
+
+  mkdir -p .vim/autoload
+  mkdir -p .scripts/
+  cp ~/repos/.dotfilesMinimal/miscfiles/Workspace.sh ~/.scripts
+  cp ~/repos/.dotfilesMinimal/miscfiles/plug.vim ~/.vim/autoload
+
+  ln -s ~/repos/.dotfilesMinimal/.bashrc ~/.bashrc
+  ln -s ~/repos/.dotfilesMinimal/.vimrc ~/.vimrc
+  source .bashrc
+
+elif [[ $var = bash ]]; then
+  echo "INSTALLING ONLY BASH"
+  echo "CREATING BACKUPS IN ~/.tmp, moved .bashrc"
+  mkdir .tmp
+  mkdir -p .scripts/
+  cp ~/repos/.dotfilesMinimal/miscfiles/Workspace.sh ~/.scripts
+  mv -rf .bashrc ~/.tmp
+
+  ln -s ~/repos/.dotfilesMinimal/.bashrc ~/.bashrc
+  source .bashrc
+elif [[ $var = vim ]]; then
+  echo "INSTALLING ONLY VIM"
+  echo "CREATING BACKUPS IN ~/.tmp, moved .vim, .vimrc"
+  mkdir .tmp
+  mv -rf .vim .vimrc ~/.tmp
+
+  mkdir -p .vim/autoload
+  cp ~/repos/.dotfilesMinimal/miscfiles/plug.vim ~/.vim/autoload
+  ln -s ~/repos/.dotfilesMinimal/.vimrc ~/.vimrc
+else echo "Not a valid argument, install failed"
+fi
