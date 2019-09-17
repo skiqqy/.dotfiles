@@ -13,6 +13,9 @@ alias vid='vim ~/'
 # Search files in the current folder
 alias f="find . | grep "
 
+#grep stuff
+export GREP_OPTIONS='--color=auto'
+
 # Ignore case on auto-completion
 # Note: bind used instead of sticking these in .inputrc
 if [[ $iatest > 0 ]]; then bind "set completion-ignore-case on"; fi

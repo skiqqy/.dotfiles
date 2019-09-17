@@ -48,7 +48,7 @@ endfunction
 :command Trail /\s\+$
 " remove all whitespaces when done
 nnoremap <silent> <F5> :call <SID>StripTrailingWhiteSpaces()<CR>
-autocmd BufWritePre *.py, *.txt, *.c :call <SID>StripTrailingWhiteSpaces()
+autocmd BufWritePre *.txt, *.c :call <SID>StripTrailingWhiteSpaces()
 " }}}
 
 " KEYBINDS {{{
