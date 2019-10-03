@@ -64,6 +64,7 @@ nnoremap <S-x> :bdelete<CR>
 " }}}
 
 " ALL SETS {{{
+set colorcolumn=80
 set number
 set relativenumber
 set hlsearch
