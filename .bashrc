@@ -2,7 +2,7 @@ export EDITOR=vim
 export VISUAL=vim
 #My aliases
 alias c='clear'
-alias ls='ls --color=auto'
+alias ls='ls -Fh --color=auto'
 alias ll='ls -l'
 alias la='ls -la' 
 alias img='cacaview '
