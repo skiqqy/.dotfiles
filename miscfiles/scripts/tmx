@@ -28,7 +28,7 @@ tmux split-window -h -p 50
 tmux select-pane -t 2
 tmux split-window -v -p 50
 tmux send-keys -t ${window}.1 '' Enter
-tmux send-keys -t ${window}.2 'vifm' Enter
+tmux send-keys -t ${window}.2 'ranger' Enter
 tmux send-keys -t ${window}.3 '' Enter
 tmux set-window-option -t $SESSION:0 automatic-rename off
 
