@@ -15,7 +15,7 @@ if [[ $var = all ]]; then
 
   mkdir -p .vim/autoload
   #mkdir -p .scripts/
-  cp ~/repos/.dotfilesMinimal/miscfiles/miscfiles/scripts/* ~/bin
+  cp ~/repos/.dotfilesMinimal/miscfiles/scripts/* ~/bin
   chmod 700 ~/bin/*.sh
   cp ~/repos/.dotfilesMinimal/miscfiles/plug.vim ~/.vim/autoload
 
@@ -29,7 +29,7 @@ elif [[ $var = bash ]]; then
   echo "CREATING BACKUPS IN ~/.tmp, moved .bashrc"
   mkdir .tmp
   mkdir bin
-  cp ~/repos/.dotfilesMinimal/miscfiles/miscfiles/scripts/* ~/bin
+  cp ~/repos/.dotfilesMinimal/miscfiles/scripts/* ~/bin
   chmod 700 ~/bin/*.sh
   mv .bashrc ~/.tmp
 
