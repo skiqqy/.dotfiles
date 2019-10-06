@@ -9,12 +9,14 @@ cd
 if [[ $var = all ]]; then
   echo "INSTALLING ALL"
   echo "CREATING BACKUPS IN ~/.tmp, moved .bashrc, .vim, .vimrc"
+  mkdir bin
   mkdir .tmp
   mv .vim .vimrc .bashrc ~/.tmp
 
   mkdir -p .vim/autoload
-  mkdir -p .scripts/
-  cp ~/repos/.dotfilesMinimal/miscfiles/Workspace.sh ~/.scripts
+  #mkdir -p .scripts/
+  cp ~/repos/.dotfilesMinimal/miscfiles/miscfiles/scripts/* ~/bin
+  chmod 700 ~/bin/*.sh
   cp ~/repos/.dotfilesMinimal/miscfiles/plug.vim ~/.vim/autoload
 
   ln -s ~/repos/.dotfilesMinimal/.bashrc ~/.bashrc
@@ -26,8 +28,9 @@ elif [[ $var = bash ]]; then
   echo "INSTALLING ONLY BASH"
   echo "CREATING BACKUPS IN ~/.tmp, moved .bashrc"
   mkdir .tmp
-  mkdir -p .scripts/
-  cp ~/repos/.dotfilesMinimal/miscfiles/Workspace.sh ~/.scripts
+  mkdir bin
+  cp ~/repos/.dotfilesMinimal/miscfiles/miscfiles/scripts/* ~/bin
+  chmod 700 ~/bin/*.sh
   mv .bashrc ~/.tmp
 
   ln -s ~/repos/.dotfilesMinimal/.bashrc ~/.bashrc
