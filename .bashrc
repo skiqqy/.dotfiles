@@ -1,5 +1,6 @@
 export EDITOR=vim
 export VISUAL=vim
+export PATH="$HOME/bin:$PATH"
 #My aliases
 alias c='clear'
 alias ls='ls -Fh --color=auto'
