@@ -4,6 +4,8 @@ set updatetime=100
 
 " vim-plug {{{
 call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-fugitive'
+Plug 'gregsexton/gitv'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
