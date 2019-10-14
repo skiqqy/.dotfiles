@@ -1,0 +1,22 @@
+if [[ -z "$1" ]]; then
+	tmux \
+	new -s Workspace \; \
+	split-window -p 50 -h \; \
+	split-window -p 25 -v \; \
+	send-keys "clear" C-m \;
+elif [[ ! -z "$1" && -z "$2" ]]; then
+	tmux \
+	new -s Workspace \; \
+	send-keys "vim $1" C-m \; \
+	split-window -p 50 -h \; \
+	split-window -p 25 -v \; \
+	send-keys "clear" C-m \;
+elif [[ ! -z "$2" && -z "$3" ]]; then
+	tmux \
+	new -s Workspace \; \
+	send-keys "vim $1" C-m \; \
+	split-window -p 50 -h \; \
+	send-keys "vim $2" C-m \; \
+	split-window -p 25 -v \; \
+	send-keys "clear" C-m \;
+fi
