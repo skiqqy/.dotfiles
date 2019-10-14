@@ -1,6 +1,8 @@
+printf "Enter Session Name: "
+read sesh
 if [[ -z "$1" ]]; then
 	tmux \
-	new -s Workspace \; \
+	new -s $sesh \; \
 	split-window -p 50 -h \; \
 	split-window -p 25 -v \; \
 	send-keys "clear" C-m \;
