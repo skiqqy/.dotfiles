@@ -20,9 +20,9 @@ if [[ $var = all ]]; then
   printf "select bash profile, A OR B:"
   read profile
   if [[ $profile = B ]]; then
-  	ls -s ~/repos/.dotfilesMinimal/miscfiles/bash/.bashrc_2 ~/.bashrc
+  	ln -s ~/repos/.dotfilesMinimal/miscfiles/bash/.bashrc_2 ~/.bashrc
   else
-  	ls -s ~/repos/.dotfilesMinimal/miscfiles/bash/.bashrc_1 ~/.bashrc
+  	ln -s ~/repos/.dotfilesMinimal/miscfiles/bash/.bashrc_1 ~/.bashrc
   fi
 
   mkdir -p .vim/autoload
@@ -49,9 +49,9 @@ elif [[ $var = bash ]]; then
   printf "select bash profile, A OR B:"
   read profile
   if [[ $profile = B ]]; then
-  	ls -s ~/repos/.dotfilesMinimal/miscfiles/bash/.bashrc_2 ~/.bashrc
+  	ln -s ~/repos/.dotfilesMinimal/miscfiles/bash/.bashrc_2 ~/.bashrc
   else
-  	ls -s ~/repos/.dotfilesMinimal/miscfiles/bash/.bashrc_1 ~/.bashrc
+  	ln -s ~/repos/.dotfilesMinimal/miscfiles/bash/.bashrc_1 ~/.bashrc
   fi
 
   #ln -s ~/repos/.dotfilesMinimal/.bashrc ~/.bashrc
