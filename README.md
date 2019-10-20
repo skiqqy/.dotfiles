@@ -10,6 +10,16 @@ My setups used for my raspberry pi's/ VM's etc
 * exit vim (:q to close first pane then again to exit)
 * open your terminal preferences and select a powerline font, example Hack-Regular, to enable powerline fonts
 * you are done :D, i recommend reading throught the .bashrc and .vimrc to see my keybinds/ aliases/ commands/ scripts so you know what you can use :D
+##__TL;DR__  
+just run this
+`cd  
+mkdir repos  
+cd repos  
+git clone https://github.com/skippy404/.dotfilesMinimal  
+cd .dotfilesMinimal  
+chmod 700 *.sh  
+./install  
+`
   
  __TERMINAL__
 ![TERMINAL](https://i.imgur.com/SQlMESF.png)
