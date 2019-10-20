@@ -13,11 +13,11 @@ if [[ $var = all ]]; then
   echo "CREATING BACKUPS IN ~/.tmp, moved .bashrc, .vim, .vimrc"
   mkdir bin
   mkdir .tmp
-  mv ~/.vim ~/.tmp
+  mv -r ~/.vim ~/.tmp
   mv ~/.vimrc ~/.tmp
   mv ~/.bashrc ~/.tmp
 
-  printf "select bash profile, A OR B:"
+  printf "select bash profile, A OR B: "
   read profile
   if [[ $profile = B ]]; then
   	ln -s ~/repos/.dotfilesMinimal/miscfiles/bash/.bashrc_2 ~/.bashrc
@@ -34,7 +34,7 @@ if [[ $var = all ]]; then
   #ln -s ~/repos/.dotfilesMinimal/.bashrc ~/.bashrc
   #ln -s $profile ~/.bashrc
   ln -s ~/repos/.dotfilesMinimal/.vimrc ~/.vimrc
-  source .bashrc
+  source ~/.bashrc
   echo "FINISHED INSTALLING BASHRC AND VIMRC"
 
 elif [[ $var = bash ]]; then
@@ -46,7 +46,7 @@ elif [[ $var = bash ]]; then
   chmod 700 ~/bin/*.sh
   mv ~/.bashrc ~/.tmp
 
-  printf "select bash profile, A OR B:"
+  printf "select bash profile, A OR B: "
   read profile
   if [[ $profile = B ]]; then
   	ln -s ~/repos/.dotfilesMinimal/miscfiles/bash/.bashrc_2 ~/.bashrc
@@ -56,14 +56,14 @@ elif [[ $var = bash ]]; then
 
   #ln -s ~/repos/.dotfilesMinimal/.bashrc ~/.bashrc
   #ln -s $profile ~/.bashrc
-  source .bashrc
+  source ~/.bashrc
   echo "FINISHED INSTALLING BASHRC"
 
 elif [[ $var = vim ]]; then
   echo "INSTALLING ONLY VIM"
   echo "CREATING BACKUPS IN ~/.tmp, moved .vim, .vimrc"
   mkdir .tmp
-  mv ~/.vim ~/.tmp
+  mv -r ~/.vim ~/.tmp
   mv ~/.vimrc ~/.tmp
 
   mkdir -p .vim/autoload
@@ -73,7 +73,7 @@ elif [[ $var = vim ]]; then
 else echo "Not a valid argument, install failed"
 fi
 
-printf "Would You like to install powerline fonts (No sudo needed) Y/N"
+printf "Would You like to install powerline fonts (No sudo needed) Y/N: "
 read pf
 
 if [[ $pf = Y ]]; then
