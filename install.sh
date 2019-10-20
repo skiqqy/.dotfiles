@@ -11,7 +11,9 @@ if [[ $var = all ]]; then
   echo "CREATING BACKUPS IN ~/.tmp, moved .bashrc, .vim, .vimrc"
   mkdir bin
   mkdir .tmp
-  mv .vim .vimrc .bashrc ~/.tmp
+  mv ~/.vim ~/.tmp
+  mv ~/.vimrc ~/.tmp
+  mv ~/.bashrc ~/.tmp
 
   mkdir -p .vim/autoload
   #mkdir -p .scripts/
@@ -31,7 +33,7 @@ elif [[ $var = bash ]]; then
   mkdir bin
   cp ~/repos/.dotfilesMinimal/miscfiles/scripts/* ~/bin
   chmod 700 ~/bin/*.sh
-  mv .bashrc ~/.tmp
+  mv ~/.bashrc ~/.tmp
 
   ln -s ~/repos/.dotfilesMinimal/.bashrc ~/.bashrc
   source .bashrc
@@ -41,11 +43,24 @@ elif [[ $var = vim ]]; then
   echo "INSTALLING ONLY VIM"
   echo "CREATING BACKUPS IN ~/.tmp, moved .vim, .vimrc"
   mkdir .tmp
-  mv .vim .vimrc ~/.tmp
+  mv ~/.vim ~/.tmp
+  mv ~/.vimrc ~/.tmp
 
   mkdir -p .vim/autoload
   cp ~/repos/.dotfilesMinimal/miscfiles/plug.vim ~/.vim/autoload
   ln -s ~/repos/.dotfilesMinimal/.vimrc ~/.vimrc
   echo "FINISHED INSTALLING VIM SETUP"
 else echo "Not a valid argument, install failed"
+fi
+
+printf "Would You like to install powerline fonts (No sudo needed) Y/N"
+read pf
+
+if [[ $pf = Y ]]; then
+	cd
+	git clone https://github.com/powerline/fonts.git --depth=1
+	cd fonts
+	./install.sh
+	cd ..
+	rm -rf fonts
 fi
