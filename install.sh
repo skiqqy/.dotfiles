@@ -13,7 +13,7 @@ if [[ $var = all ]]; then
   echo "CREATING BACKUPS IN ~/.tmp, moved .bashrc, .vim, .vimrc"
   mkdir bin
   mkdir .tmp
-  mv -r ~/.vim ~/.tmp
+  mv ~/.vim ~/.tmp
   mv ~/.vimrc ~/.tmp
   mv ~/.bashrc ~/.tmp
 
@@ -63,7 +63,7 @@ elif [[ $var = vim ]]; then
   echo "INSTALLING ONLY VIM"
   echo "CREATING BACKUPS IN ~/.tmp, moved .vim, .vimrc"
   mkdir .tmp
-  mv -r ~/.vim ~/.tmp
+  mv ~/.vim ~/.tmp
   mv ~/.vimrc ~/.tmp
 
   mkdir -p .vim/autoload
