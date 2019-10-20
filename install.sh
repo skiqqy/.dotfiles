@@ -20,9 +20,9 @@ if [[ $var = all ]]; then
   printf "select bash profile, 1 OR 2:"
   read profile
   if [[ $profile = 2 ]]; then
-  	$profile = ~/repos/.dotfileMinimal/miscfiles/.bashrc_2
+  	ls -s ~/repos/.dotfileMinimal/miscfiles/.bashrc_2 ~/.bashrc
   else
-  	$profile = ~/repos/.dotfileMinimal/miscfiles/.bashrc_1
+  	ls -s ~/repos/.dotfileMinimal/miscfiles/.bashrc_1 ~/.bashrc
   fi
 
   mkdir -p .vim/autoload
@@ -32,7 +32,7 @@ if [[ $var = all ]]; then
   cp ~/repos/.dotfilesMinimal/miscfiles/plug.vim ~/.vim/autoload
 
   #ln -s ~/repos/.dotfilesMinimal/.bashrc ~/.bashrc
-  ln -s $profile ~/.bashrc
+  #ln -s $profile ~/.bashrc
   ln -s ~/repos/.dotfilesMinimal/.vimrc ~/.vimrc
   source .bashrc
   echo "FINISHED INSTALLING BASHRC AND VIMRC"
@@ -49,13 +49,13 @@ elif [[ $var = bash ]]; then
   printf "select bash profile, 1 OR 2:"
   read profile
   if [[ $profile = 2 ]]; then
-  	$profile = ~/repos/.dotfileMinimal/miscfiles/.bashrc_2
+  	ls -s ~/repos/.dotfileMinimal/miscfiles/.bashrc_2 ~/.bashrc
   else
-  	$profile = ~/repos/.dotfileMinimal/miscfiles/.bashrc_1
+  	ls -s ~/repos/.dotfileMinimal/miscfiles/.bashrc_1 ~/.bashrc
   fi
 
   #ln -s ~/repos/.dotfilesMinimal/.bashrc ~/.bashrc
-  ln -s $profile ~/.bashrc
+  #ln -s $profile ~/.bashrc
   source .bashrc
   echo "FINISHED INSTALLING BASHRC"
 
