@@ -17,9 +17,9 @@ if [[ $var = all ]]; then
   mv ~/.vimrc ~/.tmp
   mv ~/.bashrc ~/.tmp
 
-  printf "select bash profile, 1 OR 2:"
+  printf "select bash profile, A OR B:"
   read profile
-  if [[ $profile = 2 ]]; then
+  if [[ $profile = B ]]; then
   	ls -s ~/repos/.dotfileMinimal/miscfiles/.bashrc_2 ~/.bashrc
   else
   	ls -s ~/repos/.dotfileMinimal/miscfiles/.bashrc_1 ~/.bashrc
@@ -46,9 +46,9 @@ elif [[ $var = bash ]]; then
   chmod 700 ~/bin/*.sh
   mv ~/.bashrc ~/.tmp
 
-  printf "select bash profile, 1 OR 2:"
+  printf "select bash profile, A OR B:"
   read profile
-  if [[ $profile = 2 ]]; then
+  if [[ $profile = B ]]; then
   	ls -s ~/repos/.dotfileMinimal/miscfiles/.bashrc_2 ~/.bashrc
   else
   	ls -s ~/repos/.dotfileMinimal/miscfiles/.bashrc_1 ~/.bashrc
