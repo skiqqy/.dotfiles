@@ -4,6 +4,7 @@ set updatetime=100
 
 " vim-plug {{{
 call plug#begin('~/.vim/plugged')
+Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv'
 Plug 'morhetz/gruvbox'
@@ -15,6 +16,7 @@ Plug 'fedorenchik/VimCalc3'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'lervag/vimtex'
+Plug 'hendrikpetertje/vimify'
 call plug#end()
 " }}}
 
