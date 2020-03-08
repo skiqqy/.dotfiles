@@ -16,7 +16,6 @@ Plug 'fedorenchik/VimCalc3'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'lervag/vimtex'
-Plug 'hendrikpetertje/vimify'
 call plug#end()
 " }}}
 
