@@ -15,6 +15,7 @@ alias sound='alsamixer'
 alias disk='pydf'
 alias screen='arandr'
 alias log="git log --graph --decorate --all"
+alias rvim='sudo -E vim'
 # Search files in the current folder
 alias f="find . | grep "
 
