@@ -24,9 +24,6 @@ bash: install
 
 powerline-fonts:
 	#install powerline-fonts
-	cd
 	git clone https://github.com/powerline/fonts.git --depth=3
-	cd fonts
-	./install.sh
-	cd ..
+	./fonts/install.sh
 	rm -rf fonts
