@@ -15,6 +15,13 @@ make vim
 ````
 make bash
 ````
+##__Uninstalling__
+
+To uninstall, simply type
+````
+make uninstall
+````
+
 ##__TL;DR__  
 just run this  
 `cd;  

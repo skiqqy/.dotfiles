@@ -6,7 +6,7 @@ all: install vim bash
 install:
 	mkdir -p ~/.backup
 	mkdir -p ~/bin
-	#cp $(DIR)/miscfiles/scripts/* ~/bin
+	cp $(DIR)/miscfiles/scripts/* ~/bin
 
 vim: install powerline-fonts
 	-rm -rf ~/.backup/.vim #only backup the latest .vim directory
