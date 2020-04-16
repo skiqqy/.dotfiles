@@ -7,7 +7,13 @@ clone the repo, then
 ````
 make
 ````
-* To just intall vim configs
+* To just install vim configs, note when complete, open vim
+(a warning complaining about 'gruvbox' will show, just hit enter), then type
+`:PlugInstall`, wait for it to finish installing (approx 20 seconds max). Then
+close vim (:q twice, too close both panes). To check that it was installed correctly
+just type `vim`, and it should now look like the image below, if there are [?] glyphs
+you must then change your terminal font to one of the installed powerline fonts,
+i personally use 'hack'
 ````
 make vim
 ````
