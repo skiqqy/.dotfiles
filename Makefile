@@ -8,7 +8,7 @@ install:
 	mkdir -p ~/bin
 	#cp $(DIR)/miscfiles/scripts/* ~/bin
 
-vim: install
+vim: install powerline-fonts
 	-mv -f ~/.vim ~/.backup
 	-mv -f ~/.vimrc ~/.backup
 	
@@ -22,3 +22,11 @@ bash: install
 	
 	ln -s $(DIR)/miscfiles/bash/.bashrc_1 ~/.bashrc
 
+powerline-fonts:
+	#install powerline-fonts
+	cd
+	git clone https://github.com/powerline/fonts.git --depth=3
+	cd fonts
+	./install.sh
+	cd ..
+	rm -rf fonts
