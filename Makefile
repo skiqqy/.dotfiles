@@ -1,7 +1,7 @@
 # Skippy's Makefile for .dotfiles
 DIR=$(shell pwd)
 
-all: install
+all: install vim bash
 
 install:
 	mkdir -p ~/.backup
