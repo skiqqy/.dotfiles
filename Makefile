@@ -28,3 +28,12 @@ powerline-fonts:
 	git clone https://github.com/powerline/fonts.git --depth=3
 	./fonts/install.sh
 	rm -rf fonts
+
+uninstall: install
+	-rm -rf ~/.vim
+	-rm -rf ~/.vimrc
+	-rm -rf ~/.bashrc
+	#restore
+	-mv -f ~/.backup/.bashrc ~/
+	-mv -f ~/.backup/.vim ~/
+	-mv -f ~/.backup/.vimrc ~/
