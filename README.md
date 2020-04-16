@@ -18,7 +18,7 @@ cd repos;
 git clone https://github.com/skippy404/.dotfilesMinimal;  
 cd .dotfilesMinimal;  
 chmod 700 *.sh;  
-./install  
+./install.sh  
 `
   
  __TERMINAL__
