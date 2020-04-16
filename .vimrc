@@ -6,6 +6,7 @@ set updatetime=100
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
+Plug 'sodapopcan/vim-twiggy'
 Plug 'gregsexton/gitv'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
