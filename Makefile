@@ -9,6 +9,7 @@ install:
 	#cp $(DIR)/miscfiles/scripts/* ~/bin
 
 vim: install powerline-fonts
+	-rm -rf ~/.backup/.vim #only backup the latest .vim directory
 	-mv -f ~/.vim ~/.backup
 	-mv -f ~/.vimrc ~/.backup
 	
