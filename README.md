@@ -17,9 +17,13 @@ i personally use 'hack'
 ````
 make vim
 ````
-* To just install bashrc configs
+* To just install bash configs
 ````
 make bash
+````
+* To just install zsh configs
+````
+make zsh
 ````
 ##__Uninstalling__
 
