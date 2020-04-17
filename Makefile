@@ -7,14 +7,14 @@ install:
 	mkdir -p ~/.backup
 	mkdir -p ~/bin
 	cp $(DIR)/miscfiles/scripts/* ~/bin
-	echo -e "INSTALL_LOC=$(PWD)\n$(cat $(DIR)/miscfiles/upd)" > ~/bin
+	echo -e "INSTALL_LOC=$(PWD)\n$(cat $(DIR)/miscfiles/upd)" > ~/bin/upd
 	chmod +x ~/bin/*
 
 vim: install powerline-fonts
 	-rm -rf ~/.backup/.vim #only backup the latest .vim directory
 	-mv -f ~/.vim ~/.backup
 	-mv -f ~/.vimrc ~/.backup
-	
+	#link files, and copy requirments
 	mkdir -p ~/.vim/autoload
 	cp $(DIR)/miscfiles/plug.vim ~/.vim/autoload
 	ln -s $(DIR)/.vimrc ~/.vimrc #Link to vimrc
@@ -22,8 +22,13 @@ vim: install powerline-fonts
 bash: install
 	#only uses simple config for now
 	-mv -f ~/.bashrc ~/.backup
-	
+	#link files
 	ln -s $(DIR)/miscfiles/bash/.bashrc_1 ~/.bashrc
+
+zsh: install
+	-mv -f ~/.zshrc ~/.backup
+	#link files
+	ln -s $(DIR)/miscfiles/zsh/.zshrc_1
 
 powerline-fonts:
 	#install powerline-fonts
