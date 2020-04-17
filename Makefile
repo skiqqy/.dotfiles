@@ -35,7 +35,7 @@ bash: install
 zsh: install
 	-mv -f ~/.zshrc ~/.backup
 	#link files
-	ln -s $(DIR)/miscfiles/zsh/.zshrc_1
+	ln -s $(DIR)/miscfiles/zsh/.zshrc_1 ~/.zshrc
 
 powerline-fonts:
 	#install powerline-fonts
