@@ -3,6 +3,10 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/skippy/.zshrc'
+
+#setup path
+export PATH="$HOME/bin:$PATH"
+#my aliases
 alias ll='ls -l'
 alias c='clear'
 alias ls='ls -Fh --color=auto'
