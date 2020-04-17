@@ -47,7 +47,9 @@ uninstall: install
 	-rm -rf ~/.vim
 	-rm -rf ~/.vimrc
 	-rm -rf ~/.bashrc
+	-rm -rf ~/.zshrc
 	#restore
 	-mv -f ~/.backup/.bashrc ~/
 	-mv -f ~/.backup/.vim ~/
 	-mv -f ~/.backup/.vimrc ~/
+	-mv -f ~/.backup/.zshrc ~/
