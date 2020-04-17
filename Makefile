@@ -7,7 +7,7 @@ install:
 	mkdir -p ~/.backup
 	mkdir -p ~/bin
 	cp $(DIR)/miscfiles/scripts/* ~/bin
-	$(shell echo -e "INSTALL_LOC=$(PWD)\n$(cat $(DIR)/miscfiles/upd)" > ~/bin/upd)
+	$(shell echo -e "INSTALL_LOC=$(PWD)\n$(cat $(DIR)/miscfiles/scripts/upd)" > ~/bin/upd)
 	chmod +x ~/bin/*
 
 vim: install powerline-fonts
