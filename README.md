@@ -43,9 +43,12 @@ git clone https://github.com/skippy404/.dotfilesMinimal;
 cd .dotfilesMinimal;  
 make
 `
-  
- __TERMINAL__
-![TERMINAL](https://i.imgur.com/SQlMESF.png)
-  
-__VIM__
+
+ __Bash Config__
+![BASH](https://i.imgur.com/SQlMESF.png)
+
+__Zsh Config__
+![ZSH](https://i.imgur.com/XB0u26e.png)
+
+__Vim Config__
 ![VIM](https://i.imgur.com/UqgDLXc.png)
