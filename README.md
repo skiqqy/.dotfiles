@@ -40,7 +40,9 @@ make zsh
 ---
 
 Alternatively, you can run the following, which also installs my
-[tmux](https://github.com/skippy404/.tmux) configs at the same time.
+[tmux](https://github.com/skippy404/.tmux) configs at the same time (for this
+method sudo is needed as dependencies are installed which require root
+access).
 ````
 wget yggpi.co.za/install.sh && chmod+x install.sh && ./install.sh
 ````
