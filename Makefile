@@ -61,3 +61,6 @@ uninstall: install
 	-mv -f ~/.backup/.vim ~/
 	-mv -f ~/.backup/.vimrc ~/
 	-mv -f ~/.backup/.zshrc ~/
+
+test: all
+	bash .test.sh
