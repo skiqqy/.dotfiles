@@ -9,6 +9,9 @@ clone the repo, then
 ````
 make
 ````
+
+---
+
 * To just install vim configs, note when complete, open vim
 (a warning complaining about 'gruvbox' will show, just hit enter), then type
 `:PlugInstall`, wait for it to finish installing (approx 20 seconds max). Then
@@ -19,22 +22,39 @@ i personally use 'hack'
 ````
 make vim
 ````
+
+---
+
 * To just install bash configs
 ````
 make bash
 ````
+
+---
+
 * To just install zsh configs
 ````
 make zsh
 ````
-##__Uninstalling__
+
+---
+
+Alternatively, you can run the following, which also installs my
+[tmux](https://github.com/skippy404/.tmux) configs at the same time.
+````
+wget yggpi.co.za/install.sh && chmod+x install.sh && ./install.sh
+````
+
+---
+
+## __Uninstalling__
 
 To uninstall, simply type
 ````
 make uninstall
 ````
 
-##__TL;DR__  
+## __TL;DR__  
 just run this  
 `cd;  
 mkdir repos;  
