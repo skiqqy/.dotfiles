@@ -8,12 +8,9 @@ setupbin:
 	cp $(DIR)/miscfiles/scripts/* ~/bin
 	-rm -f ~/bin/upd
 
-
+# Make backup directory, and setup update script
 install:
 	mkdir -p ~/.backup
-	#mkdir -p ~/bin
-	#cp $(DIR)/miscfiles/scripts/* ~/bin
-	#$(shell bash "echo -e "INSTALL_LOC=$(DIR)\n$(cat $(DIR)/miscfiles/scripts/upd)" > ~/bin/upd")
 	$(shell echo "INSTALL_LOC=$(PWD)" > ~/bin/upd)
 	$(shell cat $(DIR)/miscfiles/scripts/upd >> ~/bin/upd)
 	chmod +x ~/bin/*
