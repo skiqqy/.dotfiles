@@ -1,12 +1,17 @@
 # Skippy's Makefile for .dotfiles
 DIR=$(shell pwd)
 
-all: install vim bash
+all: setupbin install vim bash
+
+setupbin:
+	mkdir -p ~/bin
+	cp $(DIR)/miscfiles/scripts/* ~/bin
+
 
 install:
 	mkdir -p ~/.backup
-	mkdir -p ~/bin
-	cp $(DIR)/miscfiles/scripts/* ~/bin
+	#mkdir -p ~/bin
+	#cp $(DIR)/miscfiles/scripts/* ~/bin
 	#$(shell bash "echo -e "INSTALL_LOC=$(DIR)\n$(cat $(DIR)/miscfiles/scripts/upd)" > ~/bin/upd")
 	-rm -f ~/bin/upd
 	$(shell echo "INSTALL_LOC=$(PWD)" > ~/bin/upd)
