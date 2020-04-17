@@ -1,19 +1,21 @@
 # Skippy's Makefile for .dotfiles
 DIR=$(shell pwd)
 
-all: setupbin install vim bash
+all: setupbin bin install vim bash zsh
 
 setupbin:
 	mkdir -p ~/bin
 	cp $(DIR)/miscfiles/scripts/* ~/bin
 	-rm -f ~/bin/upd
 
-# Make backup directory, and setup update script
-install:
-	mkdir -p ~/.backup
+bin:
 	$(shell echo "INSTALL_LOC=$(PWD)" > ~/bin/upd)
 	$(shell cat $(DIR)/miscfiles/scripts/upd >> ~/bin/upd)
 	chmod +x ~/bin/*
+
+# Make backup directory, and setup update script
+install:
+	mkdir -p ~/.backup
 
 vim: install powerline-fonts
 	-rm -rf ~/.backup/.vim #only backup the latest .vim directory
