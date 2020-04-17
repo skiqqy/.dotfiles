@@ -1,0 +1,6 @@
+CURRD=$(pwd)
+cd $INSTALL_LOC
+git add .
+git commit -m "Script Update"
+git push
+cd $CURRD
