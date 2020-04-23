@@ -69,6 +69,7 @@ uninstall: install
 		rm -rf ~/.bashrc; \
 		mv -f ~/.backup/.bashrc ~/; \
 		for file in $(DIR)/miscfiles/scripts/* ; do \
+			echo "Deleting ~/$$file"; \
 			rm -f ~/bin/$$file; \
 		done;\
 		if [ ! "ls -A ~/bin" ]; then \
