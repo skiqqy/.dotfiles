@@ -56,37 +56,37 @@ powerline-fonts:
 # Uninstall, and revert to previous configs
 uninstall: install
 	# Check vim status, and do backup if needed
-	-@if [ -f ~/.backup/.dfVIM ]; then\
-		rm -rf ~/.vim;\
-		rm -rf ~/.vimrc;\
-		mv -f ~/.backup/.vim ~/;\
-		mv -f ~/.backup/.vimrc ~/;\
+	-@if [ -f ~/.backup/.dfVIM ]; then \
+		rm -rf ~/.vim; \
+		rm -rf ~/.vimrc; \
+		mv -f ~/.backup/.vim ~/; \
+		mv -f ~/.backup/.vimrc ~/; \
 		# uninstall succsesful!
-		rm -rf ~/.backup/.dfVIM;\
+		rm -rf ~/.backup/.dfVIM; \
 	fi
 	# Check bash status, and do backup if needed
-	-@if [ -f ~/.backup/.dfBASH ]; then\
-		rm -rf ~/.bashrc;\
-		mv -f ~/.backup/.bashrc ~/;\
+	-@if [ -f ~/.backup/.dfBASH ]; then \
+		rm -rf ~/.bashrc; \
+		mv -f ~/.backup/.bashrc ~/; \
 		#lastly, loop through and delete scripts in ~/bin
-		for file in $(DIR)/miscfiles/scripts/*;\
-		do\
-			rm -f ~/bin/$$file;\
-		done\
+		for file in $(DIR)/miscfiles/scripts/* \
+		do \
+			rm -f ~/bin/$$file \
+		done \
 		#delete ~/bin if it is empty
-		if [ ! "ls -A ~/bin" ]; then\
-			echo "Deleting ~/bin, since it is empty";\
-			rm -rf ~/bin;\
-		fi\
+		if [ ! "ls -A ~/bin" ]; then \
+			echo "Deleting ~/bin, since it is empty" \
+			rm -rf ~/bin \
+		fi \
 		# uninstall succsesful!
-		rm -rf ~/.backup/.dfBASH;\
+		rm -rf ~/.backup/.dfBASH; \
 	fi
 	# Check zsh status, and fo backup if needed
-	-@if [ -f ~/.backup/.dfZSH ]; then\
-		rm -rf ~/.zshrc;\
-		mv -f ~/.backup/.zshrc ~/;\
+	-@if [ -f ~/.backup/.dfZSH ]; then \
+		rm -rf ~/.zshrc; \
+		mv -f ~/.backup/.zshrc ~/; \
 		# uninstall succsesful!
-		rm -rf ~/.backup/.dfZSH;\
+		rm -rf ~/.backup/.dfZSH; \
 	fi
 
 test: all
