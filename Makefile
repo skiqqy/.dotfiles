@@ -69,15 +69,14 @@ uninstall: install
 		rm -rf ~/.bashrc; \
 		mv -f ~/.backup/.bashrc ~/; \
 		#lastly, loop through and delete scripts in ~/bin
-		for file in $(DIR)/miscfiles/scripts/* \
-		do \
+		for file in $(DIR)/miscfiles/scripts/* do; \
 			rm -f ~/bin/$$file \
-		done \
+		done;\
 		#delete ~/bin if it is empty
 		if [ ! "ls -A ~/bin" ]; then \
-			echo "Deleting ~/bin, since it is empty" \
-			rm -rf ~/bin \
-		fi \
+			echo "Deleting ~/bin, since it is empty"; \
+			rm -rf ~/bin; \
+		fi; \
 		# uninstall succsesful!
 		rm -rf ~/.backup/.dfBASH; \
 	fi
