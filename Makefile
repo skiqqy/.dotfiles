@@ -68,23 +68,19 @@ uninstall: install
 	-@if [ -f ~/.backup/.dfBASH ]; then \
 		rm -rf ~/.bashrc; \
 		mv -f ~/.backup/.bashrc ~/; \
-		#lastly, loop through and delete scripts in ~/bin
 		for file in $(DIR)/miscfiles/scripts/* ; do \
 			rm -f ~/bin/$$file; \
 		done;\
-		#delete ~/bin if it is empty
 		if [ ! "ls -A ~/bin" ]; then \
 			echo "Deleting ~/bin, since it is empty"; \
 			rm -rf ~/bin; \
 		fi;\
-		# uninstall succsesful!
 		rm -rf ~/.backup/.dfBASH; \
 	fi
 	# Check zsh status, and fo backup if needed
 	-@if [ -f ~/.backup/.dfZSH ]; then \
 		rm -rf ~/.zshrc; \
 		mv -f ~/.backup/.zshrc ~/; \
-		# uninstall succsesful!
 		rm -rf ~/.backup/.dfZSH; \
 	fi
 
