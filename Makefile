@@ -69,9 +69,9 @@ uninstall: install
 		rm -rf ~/.bashrc;\
 		mv -f ~/.backup/.bashrc ~/;\
 		#lastly, loop through and delete scripts in ~/bin
-		for file in $(DIR)/miscfiles/scripts/*\
+		for file in $(DIR)/miscfiles/scripts/*;\
 		do\
-			rm -f ~/bin/$$file\
+			rm -f ~/bin/$$file;\
 		done\
 		#delete ~/bin if it is empty
 		if [ ! "ls -A ~/bin" ]; then\
