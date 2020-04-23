@@ -56,7 +56,7 @@ To uninstall, simply type
 make uninstall
 ````
 This reset's all your configs to the way they where before you installed, this
-is achieved through the ~/.backup and ~/.backup/.df\* files. Due to this, Note,
+is achieved through the ~/.backup and ~/.backup/.df\* files. Note,
 the `make uninstall` only uninstall's the components you selected, that is, say
 you type `make bash`, bash configs will be installed, then when you type `make uninstall`,
 only the bash configs will be uninstalled and restored, ie other configs (for example
@@ -64,13 +64,14 @@ vim configs will remain unaffected)
 
 ## __TL;DR__  
 just run this  
-`cd;  
-mkdir repos;  
-cd repos;  
-git clone https://github.com/skippy404/.dotfilesMinimal;  
-cd .dotfilesMinimal;  
+````
+cd
+mkdir repos
+cd repos
+git clone https://github.com/skippy404/.dotfilesMinimal
+cd .dotfilesMinimal  
 make
-`
+````
 
  __Bash Config__
 ![BASH](https://i.imgur.com/SQlMESF.png)
