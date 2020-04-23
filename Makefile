@@ -70,7 +70,7 @@ uninstall: install
 		mv -f ~/.backup/.bashrc ~/; \
 		for file in $(DIR)/miscfiles/scripts/* ; do \
 			echo "Deleting ~/$$file"; \
-			rm -f ~/bin/$$file; \
+			rm -f ~/bin$$file; \
 		done;\
 		if [ ! "ls -A ~/bin" ]; then \
 			echo "Deleting ~/bin, since it is empty"; \
