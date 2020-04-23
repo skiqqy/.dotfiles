@@ -57,15 +57,15 @@ powerline-fonts:
 uninstall: install
 	# Check vim status, and do backup if needed
 	-@if [ -f ~/.backup/.dfVIM ]; then\
-		rm -rf ~/.backup/.dfVIM;\
 		rm -rf ~/.vim;\
 		rm -rf ~/.vimrc;\
 		mv -f ~/.backup/.vim ~/;\
 		mv -f ~/.backup/.vimrc ~/;\
+		# uninstall succsesful!
+		rm -rf ~/.backup/.dfVIM;\
 	fi
 	# Check bash status, and do backup if needed
 	-@if [ -f ~/.backup/.dfBASH ]; then\
-		rm -rf ~/.backup/.dfBASH;\
 		rm -rf ~/.bashrc;\
 		mv -f ~/.backup/.bashrc ~/;\
 		#lastly, loop through and delete scripts in ~/bin
@@ -75,15 +75,18 @@ uninstall: install
 		done\
 		#delete ~/bin if it is empty
 		if [ ! "ls -A ~/bin" ]; then\
-			echo "Deleting ~/bin, since it is empty"
+			echo "Deleting ~/bin, since it is empty";\
 			rm -rf ~/bin;\
 		fi\
+		# uninstall succsesful!
+		rm -rf ~/.backup/.dfBASH;\
 	fi
 	# Check zsh status, and fo backup if needed
 	-@if [ -f ~/.backup/.dfZSH ]; then\
-		rm -rf ~/.backup/.dfZSH;\
 		rm -rf ~/.zshrc;\
 		mv -f ~/.backup/.zshrc ~/;\
+		# uninstall succsesful!
+		rm -rf ~/.backup/.dfZSH;\
 	fi
 
 test: all
