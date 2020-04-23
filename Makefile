@@ -61,7 +61,7 @@ uninstall: install
 		rm -rf ~/.vimrc; \
 		mv -f ~/.backup/.vim ~/; \
 		mv -f ~/.backup/.vimrc ~/; \
-		# uninstall succsesful!
+		echo "vim uninstall succsesful!"; \
 		rm -rf ~/.backup/.dfVIM; \
 	fi
 	# Check bash status, and do backup if needed
