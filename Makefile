@@ -57,23 +57,23 @@ powerline-fonts:
 uninstall: install
 	# Check vim status, and do backup if needed
 	@if [ -f ~/.backup/.dfVIM ]]; then\
-		-rm -rf ~/.backup/.dfVIM;\
-		-rm -rf ~/.vim;\
-		-rm -rf ~/.vimrc;\
-		-mv -f ~/.backup/.vim ~/;\
-		-mv -f ~/.backup/.vimrc ~/;\
+		rm -rf ~/.backup/.dfVIM;\
+		rm -rf ~/.vim;\
+		rm -rf ~/.vimrc;\
+		mv -f ~/.backup/.vim ~/;\
+		mv -f ~/.backup/.vimrc ~/;\
 	fi
 	# Check bash status, and do backup if needed
 	@if [ -f ~/.backup/.dfBASH ]; then\
-		-rm -rf ~/.backup/.dfBASH;\
-		-rm -rf ~/.bashrc;\
-		-mv -f ~/.backup/.bashrc ~/;\
+		rm -rf ~/.backup/.dfBASH;\
+		rm -rf ~/.bashrc;\
+		mv -f ~/.backup/.bashrc ~/;\
 	fi
 	# Check zsh status, and fo backup if needed
 	@if [ -f ~/.backup/.dfZSH ]; then\
-		-rm -rf ~/.backup/.dfZSH;\
-		-rm -rf ~/.zshrc;\
-		-mv -f ~/.backup/.zshrc ~/;\
+		rm -rf ~/.backup/.dfZSH;\
+		rm -rf ~/.zshrc;\
+		mv -f ~/.backup/.zshrc ~/;\
 	fi
 
 test: all
