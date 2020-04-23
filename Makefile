@@ -56,7 +56,7 @@ powerline-fonts:
 # Uninstall, and revert to previous configs
 uninstall: install
 	# Check vim status, and do backup if needed
-	-@if [ -f ~/.backup/.dfVIM ]]; then\
+	-@if [ -f ~/.backup/.dfVIM ]; then\
 		rm -rf ~/.backup/.dfVIM;\
 		rm -rf ~/.vim;\
 		rm -rf ~/.vimrc;\
