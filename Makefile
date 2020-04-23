@@ -71,7 +71,7 @@ uninstall: install
 		#lastly, loop through and delete scripts in ~/bin
 		for file in $(DIR)/miscfiles/scripts/* ; do \
 			rm -f ~/bin/$$file \
-		done;\
+		done \
 		#delete ~/bin if it is empty
 		if [ ! "ls -A ~/bin" ]; then \
 			echo "Deleting ~/bin, since it is empty"; \
