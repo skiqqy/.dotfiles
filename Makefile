@@ -76,7 +76,7 @@ uninstall: install
 		if [ ! "ls -A ~/bin" ]; then \
 			echo "Deleting ~/bin, since it is empty"; \
 			rm -rf ~/bin; \
-		fi; \
+		fi \
 		# uninstall succsesful!
 		rm -rf ~/.backup/.dfBASH; \
 	fi
