@@ -22,25 +22,28 @@ install:
 
 # Install vim configs
 vim: install powerline-fonts
-	-rm -rf ~/.backup/.vim #only backup the latest .vim directory
+	-rm -rf ~/.backup/.vim # only backup the latest .vim directory
 	-mv -f ~/.vim ~/.backup
 	-mv -f ~/.vimrc ~/.backup
-	#link files, and copy requirments
+	touch ~/.backup/.dfVIM # Let's us know that vim configs was installed
+	# link files, and copy requirments
 	mkdir -p ~/.vim/autoload
 	cp $(DIR)/miscfiles/plug.vim ~/.vim/autoload
-	ln -s $(DIR)/.vimrc ~/.vimrc #Link to vimrc
+	ln -s $(DIR)/.vimrc ~/.vimrc # Link to vimrc
 
 # Intall Bash configs
 bash: install
-	#only uses simple config for now
+	# only uses simple config for now
 	-mv -f ~/.bashrc ~/.backup
-	#link files
+	touch ~/.backup/.dfBASH # Let's us know that bash configs was installed
+	# link files
 	ln -s $(DIR)/miscfiles/bash/.bashrc_1 ~/.bashrc
 
 # Install zsh configs
 zsh: install
 	-mv -f ~/.zshrc ~/.backup
-	#link files
+	touch ~/.backup/.dfZSH # Let's  us know that zsh configs was installed
+	# link files
 	ln -s $(DIR)/miscfiles/zsh/.zshrc_1 ~/.zshrc
 
 # Vim dependencies
@@ -52,15 +55,26 @@ powerline-fonts:
 
 # Uninstall, and revert to previous configs
 uninstall: install
-	-rm -rf ~/.vim
-	-rm -rf ~/.vimrc
-	-rm -rf ~/.bashrc
-	-rm -rf ~/.zshrc
-	#restore
-	-mv -f ~/.backup/.bashrc ~/
-	-mv -f ~/.backup/.vim ~/
-	-mv -f ~/.backup/.vimrc ~/
-	-mv -f ~/.backup/.zshrc ~/
+	# Check vim status, and do backup if needed
+	@if [ -f ~/.backup/.dfVIM ]]; then\
+		-rm -rf ~/.backup/.dfVIM;\
+		-rm -rf ~/.vim;\
+		-rm -rf ~/.vimrc;\
+		-mv -f ~/.backup/.vim ~/;\
+		-mv -f ~/.backup/.vimrc ~/;\
+	fi
+	# Check bash status, and do backup if needed
+	@if [ -f ~/.backup/.dfBASH ]; then\
+		-rm -rf ~/.backup/.dfBASH;\
+		-rm -rf ~/.bashrc;\
+		-mv -f ~/.backup/.bashrc ~/;\
+	fi
+	# Check zsh status, and fo backup if needed
+	@if [ -f ~/.backup/.dfZSH ]; then\
+		-rm -rf ~/.backup/.dfZSH;\
+		-rm -rf ~/.zshrc;\
+		-mv -f ~/.backup/.zshrc ~/;\
+	fi
 
 test: all
 	bash .test.sh
