@@ -20,6 +20,15 @@ alias rvim='sudo -E vim'
 # Search files in the current folder
 alias f="find . | grep "
 
+#Ease of use
+alias ta='tmux attach -t'
+
+#Git stuff
+alias ga='git add'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gcb='git checkout -b'
+
 #grep stuff
 export GREP_OPTIONS='--color=auto'
 
