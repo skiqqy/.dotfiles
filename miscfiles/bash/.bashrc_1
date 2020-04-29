@@ -29,6 +29,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gcm='git commit -m'
 alias gp='git push'
+alias gch='git checkout'
 alias gcb='git checkout -b'
 alias gl="git log --graph --decorate --all"
 alias glm="git log --graph --decorate --all --oneline"
