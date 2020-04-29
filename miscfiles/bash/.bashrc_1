@@ -18,7 +18,8 @@ alias rvim='sudo -E vim'
 # Search files in the current folder
 alias f="find . | grep "
 
-#Ease of use
+#Tmux stuff
+alias tls='tmux ls'
 alias ta='tmux attach -t'
 
 #Git stuff
