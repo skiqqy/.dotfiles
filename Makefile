@@ -94,6 +94,3 @@ uninstall: install
 
 test: all
 	bash .test.sh
-
-testuninstall: uninstall
-	bash .testuninstall.sh

@@ -2,4 +2,11 @@
 if ! [[ -f ~/.bashrc && -f ~/.vimrc && -f ~/.zshrc && -f ~/.vim/autoload/plug.vim ]]; then
 	exit 1
 fi
-echo "Install test Completed"
+
+make uninstall
+
+if [[ -f ~/.backup/.vim || -f ~/.backup/.vimrc || -f ~/.backup/.bashrc || -f ~/.backup/.zshrc ]]; then
+	exit 1
+fi
+
+echo "Tests Completed"
