@@ -15,25 +15,21 @@ make
 
 ---
 
-* To just install vim configs, Note when the installation is complete, open vim,
-if there are [?] glyphs you must then change your terminal font to one of the
-installed powerline fonts, I personally use 'hack'.
+* To just install vim configs,
 ````
 make vim
 ````
 
 ---
 
-* To just install bash configs, a note on the bashrc, the prompt is setup like
-so `<name>@<pc>[git-status]-><time><pwd>`, note `[git-status]` is only present
-when you are inside a repo, and has certain 'flags' based on the repo status.
+* To just install bash configs,
 ````
 make bash
 ````
 
 ---
 
-* To just install zsh configs
+* To just install zsh configs,
 ````
 make zsh
 ````
@@ -63,16 +59,16 @@ wget yggpi.co.za/install.sh && chmod+x install.sh && ./install.sh
 	* `[git-status 'flag']` -> is only present when inside a repository, and
 	instead of 'git-status' it displays the current branch, and has flags present
 	based on the repo status, specifically,
-	 * `!` -> File(s) has been modified/ is unstaged.
-	 * `?` -> File(s) is not being tracking.
-	 * `+` -> File(s) have been added to be tracked.
-	 * `>` -> File(s) have been renamed.
-	 * `x` -> File(s) have stopped being tracked (ie deleted from repo).
-	 * `*` -> Commits have not been pushed.
+	    * `!` -> File(s) has been modified/ is unstaged.
+	    * `?` -> File(s) is not being tracking.
+	    * `+` -> File(s) have been added to be tracked.
+	    * `>` -> File(s) have been renamed.
+	    * `x` -> File(s) have stopped being tracked (ie deleted from repo).
+	    * `*` -> Commits have not been pushed.
 	* Note, these 'flags' can be grouped, an example is show:
-	 * `user@pc[master !?]23:28~/repo1` -> In order of flag appearence, on
+	    * `user@pc[master !?]23:28~/repo1` -> In order of flag appearence, on
 	    'master' branch, modified/unstaged file, and an untracked file.
-	 * `user@pc[test_branch x+?*]23:28~/repo2` -> In order of flag appearence,
+	    * `user@pc[test_branch x+?*]23:28~/repo2` -> In order of flag appearence,
 	    on 'test_branch', with a file has been untracked/ deleted, a file that
 		has been tracked, an untracked file, and commits that have not been pushed.
 	* `pwd` -> is your current path.
