@@ -1,4 +1,8 @@
+#!/bin/bash
 # check that links are succesful
+
+echo Starting Tests
+
 if ! [[ -f ~/.bashrc && -f ~/.vimrc && -f ~/.zshrc && -f ~/.vim/autoload/plug.vim ]]; then
 	exit 1
 fi
