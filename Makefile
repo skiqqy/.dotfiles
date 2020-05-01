@@ -36,6 +36,7 @@ vim: install powerline-fonts
 	#mkdir -p ~/.vim/autoload
 	#cp $(DIR)/miscfiles/plug.vim ~/.vim/autoload
 	ln -s $(DIR)/.vimrc ~/.vimrc # Link to vimrc
+	vim -c PlugInstall -c q -c q
 
 # Intall Bash configs
 bash: install
