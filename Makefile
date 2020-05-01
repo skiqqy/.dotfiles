@@ -27,8 +27,8 @@ vim: install powerline-fonts
 	-mv -f ~/.vimrc ~/.backup
 	touch ~/.backup/.dfVIM # Let's us know that vim configs was installed
 	# link files, and copy requirments
-	mkdir -p ~/.vim/autoload
-	cp $(DIR)/miscfiles/plug.vim ~/.vim/autoload
+	#mkdir -p ~/.vim/autoload
+	#cp $(DIR)/miscfiles/plug.vim ~/.vim/autoload
 	ln -s $(DIR)/.vimrc ~/.vimrc # Link to vimrc
 
 # Intall Bash configs
