@@ -28,8 +28,8 @@ call plug#end()
 
 " Colors {{{
 "GRUVBOX
-colorscheme gruvbox
-set background=dark
+silent! colorscheme gruvbox
+silent! set background=dark
 
 "MONOKAI DARK
 "colorscheme monokai
