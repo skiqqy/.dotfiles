@@ -4,21 +4,20 @@
 My setups used for my raspberry pi's/ VM's etc  
 
 ## __INSTALLING__  
-clone the repo, then
-* To install both vim and bashrc configs:
+clone the repo, then follow the instructions below, note when if it looks fozen
+when vim opens, vim just isnt buffering because it is in a non-buffering state,
+simply wait for the install to finish (depending on your internet speed, max 30
+seconds for all the plugins to be downloaded)
+* To install everything (vim, bash, zsh)
 ````
 make
 ````
 
 ---
 
-* To just install vim configs, note when complete, open vim
-(a warning complaining about 'gruvbox' will show, just hit enter), then type
-`:PlugInstall`, wait for it to finish installing (approx 20 seconds max). Then
-close vim (:q twice, too close both panes). To check that it was installed correctly
-just type `vim`, and it should now look like the image below, if there are [?] glyphs
-you must then change your terminal font to one of the installed powerline fonts,
-i personally use 'hack'
+* To just install vim configs, Note when the installation is complete, open vim,
+if there are [?] glyphs you must then change your terminal font to one of the
+installed powerline fonts, I personally use 'hack'.
 ````
 make vim
 ````
