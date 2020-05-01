@@ -92,5 +92,5 @@ uninstall: install
 		rm -rf ~/.backup/.dfZSH; \
 	fi
 
-test: all
+test:
 	bash .test.sh
