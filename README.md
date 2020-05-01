@@ -24,7 +24,9 @@ make vim
 
 ---
 
-* To just install bash configs
+* To just install bash configs, a note on the bashrc, the prompt is setup like
+so `<name>@<pc>[git-status]-><time><pwd>`, note `[git-status]` is only present
+when you are inside a repo, and has certain 'flags' based on the repo status.
 ````
 make bash
 ````
@@ -38,7 +40,7 @@ make zsh
 
 ---
 
-Alternatively, you can run the following, which also installs my
+* Alternatively, you can run the following, which also installs my
 [tmux](https://github.com/skippy404/.tmux) configs at the same time (for this
 method sudo is needed as dependencies are installed which require root
 access).
@@ -47,6 +49,39 @@ wget yggpi.co.za/install.sh && chmod+x install.sh && ./install.sh
 ````
 
 ---
+
+### FAQS
+
+* vim:
+	* if there are [?] glyphs you must then change your terminal font to one of
+	  the installed powerline fonts, I personally use 'hack'.
+
+* bash:
+	* The prompt is setup like so: `<name>@<hostname>[git-status 'flag']-><time><pwd>`
+	* `name` -> your username.
+	* `hostname` -> your hostname.
+	* `[git-status 'flag']` -> is only present when inside a repository, and
+	instead of 'git-status' it displays the current branch, and has flags present
+	based on the repo status, specifically,
+	 * `!` -> File(s) has been modified/ is unstaged.
+	 * `?` -> File(s) is not being tracking.
+	 * `+` -> File(s) have been added to be tracked.
+	 * `>` -> File(s) have been renamed.
+	 * `x` -> File(s) have stopped being tracked (ie deleted from repo).
+	 * `*` -> Commits have not been pushed.
+	* Note, these 'flags' can be grouped, an example is show:
+	 * `user@pc[master !?]23:28~/repo1` -> In order of flag appearence, on
+	    'master' branch, modified/unstaged file, and an untracked file.
+	 * `user@pc[test_branch x+?*]23:28~/repo2` -> In order of flag appearence,
+	    on 'test_branch', with a file has been untracked/ deleted, a file that
+		has been tracked, an untracked file, and commits that have not been pushed.
+	* `pwd` -> is your current path.
+* Macos + bashrc + zsh
+	* Macos freaks out with my alias setup for ls, as a result when you `ls`
+	  a warning is shown, to fix this, simply edit ~/.bashrc or ~/.zshrc (which
+	  ever one you are using), and just removed the appropriate aliases, that
+	  is, delete the lines with 'ls -Fh --color=auto'. I keep it in the bashrc
+	  and zshrc since i dont use MacOS, muh arch linux.
 
 ## __Uninstalling__
 
