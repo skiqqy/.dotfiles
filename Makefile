@@ -30,6 +30,7 @@ vim: install powerline-fonts
 	-@curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 		    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
 			|| \
+			echo "Curl failed, resulting to emergency plug.vim" && \
 			mkdir -p ~/.vim/autoload  && \
 			cp $(DIR)/miscfiles/plug.vim ~/.vim/autoload
 	#mkdir -p ~/.vim/autoload
