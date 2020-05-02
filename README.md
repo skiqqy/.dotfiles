@@ -41,7 +41,7 @@ make zsh
 method sudo is needed as dependencies are installed which require root
 access).
 ````
-wget yggpi.co.za/install.sh && chmod+x install.sh && ./install.sh
+curl -O yggpi.co.za/install.sh && bash install.sh
 ````
 
 ---
