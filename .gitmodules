@@ -1,3 +1,0 @@
-[submodule "submodules/pfetch"]
-	path = submodules/pfetch
-	url = https://github.com/dylanaraps/pfetch
