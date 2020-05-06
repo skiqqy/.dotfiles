@@ -53,7 +53,7 @@ bash: install
 	ln -s $(DIR)/.bashrc_local ~/.bashrc
 	#ln -s $(DIR)/miscfiles/bash/.bashrc_1 ~/.bashrc
 
-cbash: bash
+cbash: 
 	# Handle system info.
 	-@echo -n "enable system info (aka neofetch/pfetch), [y/n]: "; \
 		read ans; \
@@ -68,10 +68,11 @@ cbash: bash
 			case $$ans in \
 				"n") \
 					echo "Neofetch chosen."; \
-					echo "neofetch" >> $(DIR)/.bashrc_local
+					echo "neofetch" >> "$(DIR)/.bashrc_local"; \
+					;; \
 				"p") \
 					echo "pfetch chosen."; \
-					echo $(DIR)/submodules/pfetch/pfetch >> $(DIR)/.bashrc_local; \
+					echo "$(DIR)/submodules/pfetch/pfetch" >> "$(DIR)/.bashrc_local"; \
 					;; \
 				*) \
 					echo "Error, Invalid Selection."; \
