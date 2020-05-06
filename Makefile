@@ -44,16 +44,16 @@ vim: install powerline-fonts
 	vim -c PlugInstall -c q -c q
 
 # Intall Bash configs
-bash: submods install
+bash: install
 	# only uses simple config for now
 	-mv -f ~/.bashrc ~/.backup
 	touch ~/.backup/.dfBASH # Let's us know that bash configs was installed
 	# link files
+	rm $(DIR)/.bashrc_local # We are creating a new one.
 	-@cat $(DIR)/miscfiles/bash/.bashrc_1 > $(DIR)/.bashrc_local
 	ln -s $(DIR)/.bashrc_local ~/.bashrc
-	#ln -s $(DIR)/miscfiles/bash/.bashrc_1 ~/.bashrc
 
-cbash: bash
+cbash: submods bash
 	# Handle system info.
 	-@echo -n "enable system info (aka neofetch/pfetch), [y/n]: "; \
 		read ans; \
