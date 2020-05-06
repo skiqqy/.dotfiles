@@ -82,7 +82,7 @@ cbash: submods
 	-@echo -n "enable thefuck? (y/n)";\
 		read ans; \
 		if [ $$ans = "y" ]; then \
-			echo "eval \"\\$$(thefuck --alias)\""; \
+			echo "eval \"\$$(thefuck --alias)\"" >> $(DIR)/.bashrc_local; \
 		fi
 
 # Install zsh configs
