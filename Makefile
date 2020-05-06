@@ -53,7 +53,7 @@ bash: install
 	-@cat $(DIR)/miscfiles/bash/.bashrc_1 > $(DIR)/.bashrc_local
 	ln -s $(DIR)/.bashrc_local ~/.bashrc
 
-cbash: submods bash
+cbash: submods
 	# Handle system info.
 	-@echo -n "enable system info (aka neofetch/pfetch), [y/n]: "; \
 		read ans; \
@@ -82,7 +82,7 @@ cbash: submods bash
 	-@echo -n "enable thefuck? (y/n)";\
 		read ans; \
 		if [ $$ans = "y" ]; then \
-			echo "eval \"$$(thefuck --alias)\""; \
+			echo "eval \"\\$$(thefuck --alias)\""; \
 		fi
 
 # Install zsh configs
