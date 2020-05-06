@@ -2,7 +2,12 @@
 DIR=$(shell pwd)
 
 # Default install
-all: setupbin bin install vim bash zsh
+all: submods setupbin bin install vim bash zsh
+
+submods:
+	# Update submodules
+	git submodule init
+	git submodule update
 
 # Preamble for bin
 setupbin:
