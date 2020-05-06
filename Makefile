@@ -53,7 +53,7 @@ bash: install
 	ln -s $(DIR)/.bashrc_local ~/.bashrc
 	#ln -s $(DIR)/miscfiles/bash/.bashrc_1 ~/.bashrc
 
-cbash: 
+cbash: bash
 	# Handle system info.
 	-@echo -n "enable system info (aka neofetch/pfetch), [y/n]: "; \
 		read ans; \
