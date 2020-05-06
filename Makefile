@@ -51,8 +51,38 @@ bash: install
 	# link files
 	-@cat $(DIR)/miscfiles/bash/.bashrc_1 > $(DIR)/.bashrc_local
 	ln -s $(DIR)/.bashrc_local ~/.bashrc
-	-@echo $(DIR)/submodules/pfetch/pfetch >> $(DIR)/.bashrc_local
 	#ln -s $(DIR)/miscfiles/bash/.bashrc_1 ~/.bashrc
+
+cbash: bash
+	# Handle system info.
+	-@echo -n "enable system info (aka neofetch/pfetch), [y/n]: "; \
+		read ans; \
+		if [ $$ans = "y" ]; then \
+			echo "The following are available:"; \
+			echo "----------------------------"; \
+			echo "(n)eofetch"; \
+			echo "(p)fetch"; \
+			echo "----------------------------"; \
+			echo -n "Please select a letter: "; \
+			read ans; \
+			case $$ans in \
+				"n") \
+					echo "Neofetch chosen."; \
+					echo "neofetch" >> $(DIR)/.bashrc_local
+				"p") \
+					echo "pfetch chosen."; \
+					echo $(DIR)/submodules/pfetch/pfetch >> $(DIR)/.bashrc_local; \
+					;; \
+				*) \
+					echo "Error, Invalid Selection."; \
+			esac; \
+		fi
+	# Setup thefuck
+	-@echo -n "enable thefuck? (y/n)";\
+		read ans; \
+		if [ $$ans = "y" ]; then \
+			echo "eval \"$$(thefuck --alias)\""; \
+		fi
 
 # Install zsh configs
 zsh: install
