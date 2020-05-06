@@ -79,7 +79,7 @@ cbash: submods
 			esac; \
 		fi
 	# Setup thefuck
-	-@echo -n "enable thefuck? (y/n)";\
+	-@echo -n "enable thefuck? (y/n): ";\
 		read ans; \
 		if [ $$ans = "y" ]; then \
 			echo "eval \"\$$(thefuck --alias)\"" >> $(DIR)/.bashrc_local; \

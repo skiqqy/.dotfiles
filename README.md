@@ -3,7 +3,7 @@
 
 My setups used for my raspberry pi's/ VM's etc  
 
-## __INSTALLING__  
+## Installing  
 clone the repo, then follow the instructions below, note when if it looks fozen
 when vim opens, vim just isnt buffering because it is in a non-buffering state,
 simply wait for the install to finish (depending on your internet speed, max 30
@@ -32,6 +32,21 @@ make bash
 * To just install zsh configs,
 ````
 make zsh
+````
+
+### Installing Custom
+
+You can further customize the configs, by using `c<target>` during installation,
+examples are show below,
+
+* install everything + a custom bash config,
+````
+make all cbash
+````
+
+* just install bash configs, and customize it,
+````
+make bash cbash
 ````
 
 ---
