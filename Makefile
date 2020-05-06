@@ -44,7 +44,10 @@ bash: install
 	-mv -f ~/.bashrc ~/.backup
 	touch ~/.backup/.dfBASH # Let's us know that bash configs was installed
 	# link files
-	ln -s $(DIR)/miscfiles/bash/.bashrc_1 ~/.bashrc
+	-@cat $(DIR)/miscfiles/bash/.bashrc_1 > $(DIR)/.bashrc_local
+	ln -s $(DIR)/.bashrc_local ~/.bashrc
+	-@echo $(DIR)/submodules/pfetch/pfetch >> $(DIR)/.bashrc_local
+	#ln -s $(DIR)/miscfiles/bash/.bashrc_1 ~/.bashrc
 
 # Install zsh configs
 zsh: install

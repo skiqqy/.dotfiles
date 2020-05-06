@@ -1,1 +1,3 @@
 *.swp
+.bashrc_local
+.zshrc_local
