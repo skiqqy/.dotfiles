@@ -2,7 +2,7 @@
 DIR=$(shell pwd)
 
 # Default install
-all: submods setupbin bin install vim bash zsh
+all: setupbin bin install vim bash zsh
 
 submods:
 	# Update submodules
@@ -44,7 +44,7 @@ vim: install powerline-fonts
 	vim -c PlugInstall -c q -c q
 
 # Intall Bash configs
-bash: install
+bash: submods install
 	# only uses simple config for now
 	-mv -f ~/.bashrc ~/.backup
 	touch ~/.backup/.dfBASH # Let's us know that bash configs was installed
