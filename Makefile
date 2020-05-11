@@ -68,7 +68,7 @@ cbash: submods
 			case $$ans in \
 				"n") \
 					echo "Neofetch chosen."; \
-					echo "neofetch" >> "$(DIR)/.bashrc_local"; \
+					echo "$(DIR)/submodules/neofetch/neofetch" >> "$(DIR)/.bashrc_local"; \
 					;; \
 				"p") \
 					echo "pfetch chosen."; \
