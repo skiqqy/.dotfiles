@@ -68,7 +68,7 @@ curl -O yggpi.co.za/install.sh && bash install.sh
 	  the installed powerline fonts, I personally use 'hack'.
 
 * bash:
-	* The prompt is setup like so: `<name>@<hostname>[git-status 'flag']-><time><pwd>`
+	* The prompt is setup like so: `[<name>@<hostname>] -[git-status 'flag']-> [<time>] <pwd>`
 	* `name` -> your username.
 	* `hostname` -> your hostname.
 	* `[git-status 'flag']` -> is only present when inside a repository, and
