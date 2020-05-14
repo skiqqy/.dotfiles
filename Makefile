@@ -60,7 +60,6 @@ bash: install
 	-rm -f $(DIR)/.bashrc_local # We are creating a new one.
 	-@cat $(DIR)/miscfiles/bash/.bashrc_1 > $(DIR)/.bashrc_local
 	ln -s $(DIR)/.bashrc_local ~/.bashrc
-	source ~/.bashrc
 
 cbash: submods
 	@# Handle system info.
