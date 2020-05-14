@@ -41,30 +41,28 @@ vim: install powerline-fonts
 	-mv -f ~/.vim ~/.backup
 	-mv -f ~/.vimrc ~/.backup
 	touch ~/.backup/.dfVIM # Let's us know that vim configs was installed
-	# link files, and copy requirments
+	@# link files, and copy requirments
 	-@curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 		    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
 			|| \
 			echo "Curl failed, resulting to emergency plug.vim" && \
 			mkdir -p ~/.vim/autoload  && \
 			cp $(DIR)/miscfiles/vim/plug.backup ~/.vim/autoload
-	#mkdir -p ~/.vim/autoload
-	#cp $(DIR)/miscfiles/plug.vim ~/.vim/autoload
 	ln -s $(DIR)/miscfiles/vim/.vimrc ~/.vimrc # Link to vimrc
-	vim -c PlugInstall -c q -c q
+	$$(vim -c PlugInstall -c q -c q)
 
 # Intall Bash configs
 bash: install
-	# only uses simple config for now
+	@# only uses simple config for now
 	-mv -f ~/.bashrc ~/.backup
 	touch ~/.backup/.dfBASH # Let's us know that bash configs was installed
-	# link files
+	@# link files
 	-rm -f $(DIR)/.bashrc_local # We are creating a new one.
 	-@cat $(DIR)/miscfiles/bash/.bashrc_1 > $(DIR)/.bashrc_local
 	ln -s $(DIR)/.bashrc_local ~/.bashrc
 
 cbash: submods
-	# Handle system info.
+	@# Handle system info.
 	-@echo -n "enable system info (aka neofetch/pfetch), [y/n]: "; \
 		read ans; \
 		if [ $$ans = "y" ]; then \
@@ -88,7 +86,7 @@ cbash: submods
 					echo "Error, Invalid Selection."; \
 			esac; \
 		fi
-	# Setup thefuck
+	@# Setup thefuck
 	-@echo -n "enable thefuck? (y/n): ";\
 		read ans; \
 		if [ $$ans = "y" ]; then \
@@ -99,19 +97,19 @@ cbash: submods
 zsh: install
 	-mv -f ~/.zshrc ~/.backup
 	touch ~/.backup/.dfZSH # Let's  us know that zsh configs was installed
-	# link files
+	@# link files
 	ln -s $(DIR)/miscfiles/zsh/.zshrc_1 ~/.zshrc
 
 # Vim dependencies
 powerline-fonts:
-	#install powerline-fonts
+	@#install powerline-fonts
 	git clone https://github.com/powerline/fonts.git --depth=3
 	./fonts/install.sh
 	rm -rf fonts
 
 # Uninstall, and revert to previous configs
 uninstall: install
-	# Check vim status, and do backup if needed
+	@# Check vim status, and do backup if needed
 	-@if [ -f ~/.backup/.dfVIM ]; then \
 		rm -rf ~/.vim; \
 		rm -rf ~/.vimrc; \
@@ -120,7 +118,7 @@ uninstall: install
 		echo "vim uninstall succsesful!"; \
 		rm -rf ~/.backup/.dfVIM; \
 	fi
-	# Check bash status, and do backup if needed
+	@# Check bash status, and do backup if needed
 	-@if [ -f ~/.backup/.dfBASH ]; then \
 		rm -rf ~/.bashrc; \
 		mv -f ~/.backup/.bashrc ~/; \
@@ -134,7 +132,7 @@ uninstall: install
 		fi;\
 		rm -rf ~/.backup/.dfBASH; \
 	fi
-	# Check zsh status, and fo backup if needed
+	@# Check zsh status, and fo backup if needed
 	-@if [ -f ~/.backup/.dfZSH ]; then \
 		rm -rf ~/.zshrc; \
 		mv -f ~/.backup/.zshrc ~/; \
