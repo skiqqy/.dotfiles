@@ -7,11 +7,11 @@ all: setupbin bin install vim bash zsh
 update:
 	git pull
 	@#Update bashrc
-	-@[[ -f ~/.backup/.dfBASH ]] && $$(rm ~/.bashrc; make bash; [[ 1=1 ]]) || echo "Skipping .bashrc"
+	-@[[ -f ~/.backup/.dfBASH ]] && $$(rm ~/.bashrc; make bash) || echo "Completed .bashrc"
 	@#Update vim
-	-@[[ -f ~/.backup/.dfVIM ]] && $$(rm ~/.vimrc; rm -rf ~/.vim; make vim; [[ 1=1 ]]) || echo "Skipping .vimrc"
+	-@[[ -f ~/.backup/.dfVIM ]] && $$(rm ~/.vimrc; rm -rf ~/.vim; make vim) || echo "Completed .vimrc"
 	@#Update zshrc
-	-@[[ -f ~/.backup/.dfZSH ]] && $$(rm ~/.zshrc; make zsh; [[ 1=1 ]]) || echo "Skipping .zshrc"
+	-@[[ -f ~/.backup/.dfZSH ]] && $$(rm ~/.zshrc; make zsh) || echo "Completed .zshrc"
 	-@echo "Update Completed!"
 
 submods:
@@ -130,12 +130,14 @@ uninstall: install
 			echo "Deleting ~/bin, since it is empty"; \
 			rm -rf ~/bin; \
 		fi;\
+		echo "bashrc uninstall succsesful!"; \
 		rm -rf ~/.backup/.dfBASH; \
 	fi
 	@# Check zsh status, and fo backup if needed
 	-@if [ -f ~/.backup/.dfZSH ]; then \
 		rm -rf ~/.zshrc; \
 		mv -f ~/.backup/.zshrc ~/; \
+		echo "zsh uninstall succsesful!"; \
 		rm -rf ~/.backup/.dfZSH; \
 	fi
 
