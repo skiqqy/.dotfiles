@@ -37,7 +37,7 @@ vim: install powerline-fonts
 			|| \
 			echo "Curl failed, resulting to emergency plug.vim" && \
 			mkdir -p ~/.vim/autoload  && \
-			cp $(DIR)/miscfiles/vim/plug.vim.backup ~/.vim/autoload
+			cp $(DIR)/miscfiles/vim/plug.backup ~/.vim/autoload
 	#mkdir -p ~/.vim/autoload
 	#cp $(DIR)/miscfiles/plug.vim ~/.vim/autoload
 	ln -s $(DIR)/miscfiles/.vimrc ~/.vimrc # Link to vimrc
