@@ -113,15 +113,15 @@ uninstall: install
 	-@if [ -f ~/.backup/.dfVIM ]; then \
 		rm -rf ~/.vim; \
 		rm -rf ~/.vimrc; \
-		[[ -f ~/.backup/.vim ]] && mv -f ~/.backup/.vim ~/ || echo "vim/ backup DNE"; \
-		[[ -f ~/.backup/.vimrc]] && mv -f ~/.backup/.vimrc ~/ || echo ".vimrc backup DNE"; \
+		[ -f ~/.backup/.vim ] && mv -f ~/.backup/.vim ~/ || echo "vim/ backup DNE"; \
+		[ -f ~/.backup/.vimrc ] && mv -f ~/.backup/.vimrc ~/ || echo ".vimrc backup DNE"; \
 		echo "vim uninstall succsesful!"; \
 		rm -rf ~/.backup/.dfVIM; \
 	fi
 	@# Check bash status, and do backup if needed
 	-@if [ -f ~/.backup/.dfBASH ]; then \
 		rm -rf ~/.bashrc; \
-		[[ -f ~/.backup/.bashrc ]] && mv -f ~/.backup/.bashrc ~/ || echo ".bashrc backup DNE"; \
+		[ -f ~/.backup/.bashrc ] && mv -f ~/.backup/.bashrc ~/ || echo ".bashrc backup DNE"; \
 		for file in $(DIR)/miscfiles/scripts/* ; do \
 			rmf=$${file##*/}; \
 			rm -f ~/bin/$$rmf; \
@@ -136,7 +136,7 @@ uninstall: install
 	@# Check zsh status, and fo backup if needed
 	-@if [ -f ~/.backup/.dfZSH ]; then \
 		rm -rf ~/.zshrc; \
-		[[ -f ~/.backup/.zshrc ]] && mv -f ~/.backup/.zshrc ~/ || echo ".zshrc backup DNE"; \
+		[ -f ~/.backup/.zshrc ] && mv -f ~/.backup/.zshrc ~/ || echo ".zshrc backup DNE"; \
 		echo "zsh uninstall succsesful!"; \
 		rm -rf ~/.backup/.dfZSH; \
 	fi
