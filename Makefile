@@ -37,10 +37,10 @@ install:
 
 # Install vim configs
 vim: install powerline-fonts
-	-rm -rf ~/.backup/.vim # only backup the latest .vim directory
-	-mv -f ~/.vim ~/.backup
-	-mv -f ~/.vimrc ~/.backup
-	touch ~/.backup/.dfVIM # Let's us know that vim configs was installed
+	-@rm -rf ~/.backup/.vim # only backup the latest .vim directory
+	-@[ -f ~/.vim ] && mv -f ~/.vim ~/.backup || echo "No 'vim/' to backup"
+	-@[ -f ~/.vimrc ] && mv -f ~/.vimrc ~/.backup || echo "No '.vimrc' to backup"
+	-@touch ~/.backup/.dfVIM # Let's us know that vim configs was installed
 	@# link files, and copy requirments
 	-@curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 		    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
@@ -54,10 +54,10 @@ vim: install powerline-fonts
 # Intall Bash configs
 bash: install
 	@# only uses simple config for now
-	-mv -f ~/.bashrc ~/.backup
-	touch ~/.backup/.dfBASH # Let's us know that bash configs was installed
+	-@[ -f ~/.bashrc ] && mv -f ~/.bashrc ~/.backup || echo "No '.bashrc' to backup"
+	-@touch ~/.backup/.dfBASH # Let's us know that bash configs was installed
 	@# link files
-	-rm -f $(DIR)/.bashrc_local # We are creating a new one.
+	-@rm -f $(DIR)/.bashrc_local # We are creating a new one.
 	-@cat $(DIR)/miscfiles/bash/.bashrc_1 > $(DIR)/.bashrc_local
 	ln -s $(DIR)/.bashrc_local ~/.bashrc
 
@@ -95,8 +95,8 @@ cbash: submods
 
 # Install zsh configs
 zsh: install
-	-mv -f ~/.zshrc ~/.backup
-	touch ~/.backup/.dfZSH # Let's  us know that zsh configs was installed
+	-@[ -f ~/.zshrc ] && mv -f ~/.zshrc ~/.backup || echo "No '.zshrc' to backup"
+	-@touch ~/.backup/.dfZSH # Let's  us know that zsh configs was installed
 	@# link files
 	ln -s $(DIR)/miscfiles/zsh/.zshrc_1 ~/.zshrc
 
