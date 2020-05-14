@@ -96,8 +96,6 @@ curl -O yggpi.co.za/install.sh && bash install.sh
 
 ## Updating
 
----
-
 The recommended method of updating the dotfiles is to run,
 ````
 make update
@@ -106,8 +104,6 @@ as this will ensure nothing will break, if you simply run `git pull`, you can
 break the dotfiles (e.g paths could have changed).
 
 ## Uninstalling
-
----
 
 To uninstall, simply type
 ````
@@ -119,8 +115,6 @@ the `make uninstall` only uninstall's the components you selected, that is, say
 you type `make bash`, bash configs will be installed, then when you type `make uninstall`,
 only the bash configs will be uninstalled and restored, ie other configs (for example
 vim configs will remain unaffected)
-
----
 
 ## TL;DR  
 just run this  
