@@ -1,4 +1,4 @@
-# .dotfilesMinimal
+# .dotfiles
 [![Build Status](https://travis-ci.com/Skippy404/.dotfilesMinimal.svg?branch=master)](https://travis-ci.com/Skippy404/.dotfilesMinimal)
 
 My setups used for my raspberry pi's/ VM's etc  
