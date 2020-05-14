@@ -127,6 +127,8 @@ cd .dotfilesMinimal
 make
 ````
 
+## Photos
+
  __Bash Config__
 ![BASH](https://i.imgur.com/SQlMESF.png)
 
