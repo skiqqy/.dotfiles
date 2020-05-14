@@ -7,11 +7,11 @@ all: setupbin bin install vim bash zsh
 update:
 	git pull
 	@#Update bashrc
-	-@[[ -f ~/.backup/.dfBASH ]] && $$(rm ~/.bashrc; make bash) || echo "Skipping .bashrc"
+	-@[[ -f ~/.backup/.dfBASH ]] && $$(rm ~/.bashrc; make bash; [[ 1=1 ]]) || echo "Skipping .bashrc"
 	@#Update vim
-	-@[[ -f ~/.backup/.dfVIM ]] && $$(rm ~/.vimrc; rm -rf ~/.vim; make vim) || echo "Skipping .vimrc"
+	-@[[ -f ~/.backup/.dfVIM ]] && $$(rm ~/.vimrc; rm -rf ~/.vim; make vim; [[ 1=1 ]]) || echo "Skipping .vimrc"
 	@#Update zshrc
-	-@[[ -f ~/.backup/.dfZSH ]] && $$(rm ~/.zshrc; make zsh) || echo "Skipping .zshrc"
+	-@[[ -f ~/.backup/.dfZSH ]] && $$(rm ~/.zshrc; make zsh; [[ 1=1 ]]) || echo "Skipping .zshrc"
 	-@echo "Update Completed!"
 
 submods:
