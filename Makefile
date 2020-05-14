@@ -49,7 +49,7 @@ vim: install powerline-fonts
 			mkdir -p ~/.vim/autoload  && \
 			cp $(DIR)/miscfiles/vim/plug.backup ~/.vim/autoload
 	ln -s $(DIR)/miscfiles/vim/.vimrc ~/.vimrc # Link to vimrc
-	vim -c PlugInstall -c q -c q
+	-@$$(vim -c PlugInstall -c q -c q)
 
 # Intall Bash configs
 bash: install
@@ -60,6 +60,7 @@ bash: install
 	-rm -f $(DIR)/.bashrc_local # We are creating a new one.
 	-@cat $(DIR)/miscfiles/bash/.bashrc_1 > $(DIR)/.bashrc_local
 	ln -s $(DIR)/.bashrc_local ~/.bashrc
+	source ~/.bashrc
 
 cbash: submods
 	@# Handle system info.
