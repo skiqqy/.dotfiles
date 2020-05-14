@@ -94,7 +94,15 @@ curl -O yggpi.co.za/install.sh && bash install.sh
 	  is, delete the lines with 'ls -Fh --color=auto'. I keep it in the bashrc
 	  and zshrc since i dont use MacOS, muh arch linux.
 
-## __Uninstalling__
+## Updating
+The recommended method of updating the dotfiles is to run,
+````
+make update
+````
+as this will ensure nothing will break, if you simply run `git pull`, you can
+break the dotfiles (e.g paths could have changed).
+
+## Uninstalling
 
 To uninstall, simply type
 ````
