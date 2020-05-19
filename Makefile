@@ -113,7 +113,7 @@ uninstall: install
 	-@if [ -f ~/.backup/.dfVIM ]; then \
 		rm -rf ~/.vim; \
 		rm -rf ~/.vimrc; \
-		[ -f ~/.backup/.vim ] && mv -f ~/.backup/.vim ~/ || echo "vim/ backup DNE"; \
+		[ -d ~/.backup/.vim ] && mv -f ~/.backup/.vim ~/ || echo "vim/ backup DNE"; \
 		[ -f ~/.backup/.vimrc ] && mv -f ~/.backup/.vimrc ~/ || echo ".vimrc backup DNE"; \
 		echo "vim uninstall succsesful!"; \
 		rm -rf ~/.backup/.dfVIM; \
