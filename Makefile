@@ -38,7 +38,7 @@ install:
 # Install vim configs
 vim: install powerline-fonts
 	-@rm -rf ~/.backup/.vim # only backup the latest .vim directory
-	-@[ -f ~/.vim ] && mv -f ~/.vim ~/.backup || echo "No 'vim/' to backup"
+	-@[ -d ~/.vim ] && mv -f ~/.vim ~/.backup || echo "No 'vim/' to backup"
 	-@[ -f ~/.vimrc ] && mv -f ~/.vimrc ~/.backup || echo "No '.vimrc' to backup"
 	-@touch ~/.backup/.dfVIM # Let's us know that vim configs was installed
 	@# link files, and copy requirments
