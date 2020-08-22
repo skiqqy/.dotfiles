@@ -22,7 +22,6 @@ Plug 'valloric/vim-indent-guides'
 Plug 'fedorenchik/VimCalc3'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
-Plug 'lervag/vimtex'
 call plug#end()
 " }}}
 
