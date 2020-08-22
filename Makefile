@@ -70,6 +70,7 @@ cbash: submods
 			echo "----------------------------"; \
 			echo "(n)eofetch"; \
 			echo "(p)fetch"; \
+			echo "(f)fet.sh"; \
 			echo "----------------------------"; \
 			echo -n "Please select a letter: "; \
 			read ans; \
@@ -81,6 +82,10 @@ cbash: submods
 				"p") \
 					echo "pfetch chosen."; \
 					echo "$(DIR)/submodules/pfetch/pfetch" >> "$(DIR)/.bashrc_local"; \
+					;; \
+				"f") \
+					echo "fet.sh chosen."; \
+					echo "$(DIR)/submodules/fet.sh/fet.sh" >> "$(DIR)/.bashrc_local"; \
 					;; \
 				*) \
 					echo "Error, Invalid Selection."; \
