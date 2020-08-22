@@ -70,7 +70,7 @@ cbash: submods
 			echo "----------------------------"; \
 			echo "(n)eofetch"; \
 			echo "(p)fetch"; \
-			echo "(f)fet.sh"; \
+			echo "(f)et.sh"; \
 			echo "----------------------------"; \
 			echo -n "Please select a letter: "; \
 			read ans; \
