@@ -1,5 +1,6 @@
 #/bin/bash
 # @Auther Stephen Cochrane
+# github: skippy404
 set -e
 
 usage () {
