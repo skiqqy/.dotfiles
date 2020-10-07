@@ -4,6 +4,10 @@ set -e
 
 usage () {
 	echo "<usage> picbin /path/to/picture"
+	echo "Args:"
+	echo "h: Shows this message."
+	echo "l: shows the link to the file in a dialog box"
+	echo "p: path to the file"
 	exit $1
 }
 
