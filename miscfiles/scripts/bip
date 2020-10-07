@@ -1,0 +1,12 @@
+toBinary(){
+	local n bit
+	for (( n=$1 ; n>0 ; n >>= 1 )); do  bit="$(( n&1 ))$bit"; done
+		printf "%s\n" "$bit"
+}
+
+addr1=$(echo $1 | cut -d "." -f 1)
+addr2=$(echo $1 | cut -d "." -f 2)
+addr3=$(echo $1 | cut -d "." -f 3)
+addr4=$(echo $1 | cut -d "." -f 4)
+
+echo $(toBinary $addr1)"."$(toBinary $addr2)"."$(toBinary $addr3)"."$(toBinary $addr4)

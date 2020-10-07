@@ -1,0 +1,13 @@
+#/bin/bash
+# @Auther Stephen Cochrane
+set -e
+kill () {
+	echo "<usage> picbin /path/to/picture"
+	exit 1
+}
+
+[ 0 -eq $# ] && kill
+[[ ! -f $1 ]] && kill
+
+echo $1
+curl -F"file=@$1" https://0x0.st
