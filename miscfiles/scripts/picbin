@@ -4,7 +4,7 @@
 set -e
 
 usage () {
-	echo "<usage> picbin /path/to/picture"
+	echo "<usage> picbin [options]"
 	echo "Args:"
 	echo "h: Shows this message."
 	echo "l: shows the link to the file in a dialog box"
