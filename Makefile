@@ -23,7 +23,7 @@ submods:
 setupbin:
 	[ ! -d ~/bin ] && git clone https://github.com/skippy404/bin $$HOME/bin || echo "bin already exists"
 	mkdir -p ~/bin/local
-	cp $(DIR)/miscfiles/scripts/* ~/bin
+	cp $(DIR)/miscfiles/scripts/* ~/bin/local/
 	-rm -f ~/bin/local/upd # We need to custom build this
 
 # Sets up custom updating script based on install location
