@@ -21,15 +21,16 @@ submods:
 
 # Preamble for bin
 setupbin:
-	mkdir -p ~/bin
+	[ ! -d ~/bin ] && git clone https://github.com/skippy404/bin || echo "bin already exists"
+	mkdir -p ~/bin/local
 	cp $(DIR)/miscfiles/scripts/* ~/bin
-	-rm -f ~/bin/upd
+	-rm -f ~/bin/local/upd # We need to custom build this
 
 # Sets up custom updating script based on install location
 bin:
-	$(shell echo "INSTALL_LOC=$(PWD)" > ~/bin/upd)
-	$(shell cat $(DIR)/miscfiles/scripts/upd >> ~/bin/upd)
-	chmod +x ~/bin/*
+	$(shell echo "INSTALL_LOC=$(PWD)" > ~/bin/local/upd)
+	$(shell cat $(DIR)/miscfiles/scripts/upd >> ~/bin/local/upd)
+	chmod +x ~/bin/local/upd
 
 # Make backup directory, and setup update script
 install:
