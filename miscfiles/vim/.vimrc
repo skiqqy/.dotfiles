@@ -76,7 +76,7 @@ nnoremap <S-x> :bdelete<CR>
 " Custom "commands {{{
 inoremap jp<Tab> System.out.println(""); <Esc>3hi
 inoremap cp<Tab> printf("\n"); <Esc>5hi
-inoremap clib<Tab>   #include <stdlib.h><CR>#include<stdio.h><Esc>
+inoremap clib<Tab>   #include <stdlib.h><CR>#include <stdio.h><Esc>
 " }}}
 
 " ALL SETS {{{
