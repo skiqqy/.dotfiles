@@ -78,6 +78,7 @@ set colorcolumn=80
 set number
 set relativenumber
 set hlsearch
+set hidden
 "TAB SETTINGS
 set autoindent    " Copy indent from current line when starting a new line.
 set tabstop=4     " Size of a hard tabstop (ts).
