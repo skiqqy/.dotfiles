@@ -73,6 +73,12 @@ nnoremap <S-Tab> :bprevious<CR>
 nnoremap <S-x> :bdelete<CR>
 " }}}
 
+" Custom "commands {{{
+inoremap jp<Tab> System.out.println(""); <Esc>3hi
+inoremap cp<Tab> printf("\n"); <Esc>5hi
+inoremap clib<Tab>   #include <stdlib.h><CR>#include<stdio.h><Esc>
+" }}}
+
 " ALL SETS {{{
 set colorcolumn=80
 set number
