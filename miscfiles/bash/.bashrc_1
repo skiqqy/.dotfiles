@@ -16,6 +16,7 @@ alias sound='alsamixer'
 alias disk='pydf'
 alias screen='arandr'
 alias rvim='sudo -E vim'
+alias xo='xdg-open'
 # Search files in the current folder
 alias f="find . | grep "
 
