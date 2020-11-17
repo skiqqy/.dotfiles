@@ -4,10 +4,10 @@
 My setups used for my raspberry pi's/ VM's etc  
 
 ## Installing  
-clone the repo in your desired location, then follow the instructions below, note when if it looks fozen
-when vim opens, vim just isnt buffering because it is in a non-buffering state,
-simply wait for the install to finish (depending on your internet speed, max 30
-seconds for all the plugins to be downloaded)
+Clone the repo in your desired location, then follow the instructions below, note
+it is normal if it looks fozen when vim starts downloading plugins, simply wait
+for the install to finish (depending on your internet speed, max 30 seconds for
+all the plugins to be downloaded).
 * To install everything (vim, bash, zsh)
 ````
 make
