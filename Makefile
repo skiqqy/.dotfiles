@@ -21,7 +21,7 @@ submods:
 
 # Preamble for bin
 setupbin:
-	[ ! -d ~/bin ] && git clone https://github.com/skippy404/bin $$HOME/bin || echo "bin already exists"
+	[ ! -d ~/bin ] && git clone https://github.com/skiqqy/bin $$HOME/bin || echo "bin already exists"
 	mkdir -p ~/bin/local
 	cp $(DIR)/miscfiles/scripts/* ~/bin/local/
 	-rm -f ~/bin/local/upd # We need to custom build this
