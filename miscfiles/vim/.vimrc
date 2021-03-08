@@ -1,5 +1,6 @@
 " misc {{{
 set updatetime=100
+set tags=./tags;$HOME
 " }}}
 
 " vim-plug {{{
