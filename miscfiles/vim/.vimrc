@@ -1,6 +1,7 @@
 " misc {{{
 set updatetime=100
 set tags=./tags;$HOME
+let @r=':r !cat /dev/random | tr -dc 0-9a-zA-Z | head -c 32' " Random 32 bytes
 " }}}
 
 " vim-plug {{{
@@ -75,8 +76,8 @@ nnoremap <S-x> :bdelete<CR>
 " }}}
 
 " Custom "commands {{{
-inoremap jp<Tab> System.out.println(""); <Esc>3hi
-inoremap cp<Tab> printf("\n"); <Esc>5hi
+inoremap jp<Tab> System.out.println("");<Esc>2hi
+inoremap cp<Tab> printf("\n");<Esc>4hi
 inoremap clib<Tab>   #include <stdlib.h><CR>#include <stdio.h><Esc>
 " }}}
 
